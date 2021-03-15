@@ -1,0 +1,19 @@
+<section class="index">
+    
+  
+    <div>
+        <p>ID :<%=joke.joke_id%> </p>
+        <P>Type :<%=joke.type%>  </P>
+        <p>Setup : <%=joke.setup %> </p>
+        <p>Punchline : <%=joke.punchline %></p>
+
+    </div>
+
+    <div>
+        <form action="/random" method="get">
+        <input type="submit" value="Random Joke">
+        </form>
+
+    </div>
+   
+</section>

@@ -1,0 +1,15 @@
+<section class="index">
+    
+   <% jokes.forEach(joke => { %>
+    <div>
+    <p> <%=joke.setup %> </p>
+    <p> <%=joke.punchline %></p>
+
+    <form action="/details/<%=joke.id%>" method="get">
+    <input type="submit" value="Details">
+    </form>
+    </div>
+   <%  }) %>
+
+   
+</section>

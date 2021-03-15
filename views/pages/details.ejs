@@ -1,0 +1,25 @@
+<section class="index">
+    
+  
+    <div>
+        <p>ID :<%=joke.joke_id%> </p>
+        <P>Type :<%=joke.type%>  </P>
+        <p>Setup : <%=joke.setup %> </p>
+        <p>Punchline : <%=joke.punchline %></p>
+
+    </div>
+
+    <div>
+        <form action="/details/<%=joke.id%>?_method=PUT" method="post">
+         <textarea name="setup" cols="30" rows="3"><%=joke.setup%></textarea> 
+         <textarea name="punchline" cols="30" rows="3"><%=joke.punchline%></textarea>  
+       <br> <input type="submit" value="Update">
+        </form>
+
+        <form action="/details/<%=joke.id%>?_method=DELETE" method="post">
+        <input type="submit" value="Delete">
+        </form>
+
+    </div>
+   
+</section>

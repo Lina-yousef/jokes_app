@@ -1,0 +1,21 @@
+<h1>Jokes_app</h1>
+<section class="index">
+    
+   <% jokes.forEach(joke => { %>
+    <div>
+    <p> <%=joke.setup %> </p>
+    <p> <%=joke.punchline %></p>
+
+<form action="/favourites" method="post">
+
+<input type="hidden" name="id" value="<%=joke.joke_id%>">
+<input type="hidden" name="type" value="<%=joke.type %>">
+<input type="hidden" name="setup" value="<%=joke.setup %>">
+<input type="hidden" name="punchline" value="<%=joke.punchline %>">
+
+<input type="submit" value="Add to Favourite">
+</form>
+</div>
+   <%  }) %>
+
+</section>
